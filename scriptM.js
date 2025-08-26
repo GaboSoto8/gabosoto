@@ -29,7 +29,7 @@ function scrollToPlan(planId) {
 
 // 🔧 Archivo: config.js
 const whatsappConfig = {
-  number: "598271560", // 👉 Reemplaza con el número real
+  number: "59898271560", // 👉 Reemplaza con el número real
   mensajesPlanes: {
     impulso: "Hola, quiero información sobre el Plan Impulso",
     transforma: "Hola, quiero información sobre el Plan Transforma",
