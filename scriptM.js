@@ -27,19 +27,13 @@ function scrollToPlan(planId) {
   }
 }
 
-// 🔧 Archivo: config.js
-const whatsappConfig = {
-  number: "59898271560", // 👉 Reemplaza con el número real
-  mensajesPlanes: {
-    impulso: "Hola, quiero información sobre el Plan Impulso",
-    transforma: "Hola, quiero información sobre el Plan Transforma",
-    elite: "Hola, quiero información sobre el Plan Elite"
-  }
-};
-
-// 📌 Función global para abrir WhatsApp
-function contactar(plan) {
-  const mensaje = encodeURIComponent(whatsappConfig.mensajesPlanes[plan]);
-  const url = `https://wa.me/${whatsappConfig.number}?text=${mensaje}`;
-  window.open(url, "_blank");
-}
+// Botones de WhatsApp en planes
+document.querySelectorAll('.btn-whatsapp').forEach(button => {
+  button.addEventListener('click', () => {
+    const plan = button.getAttribute('data-plan'); 
+    const numero = "59898271560"; // Tu número de WhatsApp sin "+" y con código de país
+    const mensaje = `Hola quiero más información sobre el PLAN ${plan}`;
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank'); 
+  });
+});
