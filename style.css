@@ -140,7 +140,7 @@ nav ul li a:hover {
 }
 
 .gallery img {
-  width: 100%;
+  width: 85%;
   height: auto;
   position: absolute;
   opacity: 0;
